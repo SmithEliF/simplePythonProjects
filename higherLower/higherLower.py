@@ -39,7 +39,7 @@ def startGame():
                         """Compares between two people and prints their information."""
                         print(f"Compare A: {name1}, a {desc1}, from {country1}.")
                         print(vs)
-                        print(f"Compare B: {person2['name']}, a {person2['description']}, from {person2['country']}.")
+                        print(f"Compare B: {name2}, a {desc2}, from {country2}.")
 
                 comparePeople()
         
@@ -83,6 +83,8 @@ def choosePeople():
     if person1 == person2:
         choosePeople()
     return person1, person2
+
+# Clears the screen
 
 def screenClear():
     """Clears the screen and prints the logo."""
