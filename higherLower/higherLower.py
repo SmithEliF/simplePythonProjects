@@ -28,6 +28,7 @@ def startGame():
         os.system('clear')
         print(logo)
 
+# Choose two people at random from the data list to compare
 
         person1 = data[random.randint(0, len(data) - 1)]
         person2 = data[random.randint(0, len(data) - 1)]
@@ -68,5 +69,5 @@ def startGame():
         else:
             print("Choose A or B only")
             continue
-        
+
 startGame()
