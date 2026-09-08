@@ -42,7 +42,7 @@ def prompt():
 
     clearScreen()
 
-    return input("What would you like? (espresso/latte/cappuccino/report): ")
+    return input("What would you like? (espresso/latte/cappuccino): ")
 
 def powerOff():
     """Powers off the machine"""
@@ -88,10 +88,10 @@ def transactionSuccess(moneyReceived, drinkCost):
             return False
 
 
-def makeCoffee(drinkName, orderIngredients):
+def makeCoffee(drinkName, drinkIngredients):
     """Deduct the required ingredients from the resources."""
-    for item in orderIngredients:
-        resources[item] -= orderIngredients[item]
+    for item in drinkIngredients:
+        resources[item] -= drinkIngredients[item]
     print(f"Here is your {drinkName} ☕️. Enjoy!")
 
 def waitForInput():
