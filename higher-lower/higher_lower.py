@@ -1,7 +1,7 @@
 import os
 from art import logo
 from art import vs
-from gameData import data
+from game_data import data
 import random
 
 os.system('clear')
