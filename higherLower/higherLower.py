@@ -21,8 +21,7 @@ def startGame():
 
     while gameloop:
 
-        os.system('clear')
-        print(logo)
+        screenClear()
 
         person1, person2 = choosePeople()
 
@@ -64,5 +63,9 @@ def choosePeople():
     if person1 == person2:
         choosePeople()
     return person1, person2
+
+def screenClear():
+    os.system('clear')
+    print(logo)
 
 startGame()
