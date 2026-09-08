@@ -16,27 +16,15 @@ gameloop = True
 
 def startGame():
 
-# Set it up to only print score if its the second time or more through the loop
-
     firstTime = True
     score = 0
 
     while gameloop:
 
-# Keep the screen clean
-
         os.system('clear')
         print(logo)
 
-# Choose two people at random from the data list to compare
-
-        person1 = data[random.randint(0, len(data) - 1)]
-        person2 = data[random.randint(0, len(data) - 1)]
-
-# Make sure the two people are not the same person
-
-        if person1 == person2:
-            continue
+        person1, person2 = choosePeople()
 
 # Only print score if its not the first time through the loop
 
@@ -69,5 +57,12 @@ def startGame():
         else:
             print("Choose A or B only")
             continue
+
+def choosePeople():
+    person1 = data[random.randint(0, len(data) - 1)]
+    person2 = data[random.randint(0, len(data) - 1)]
+    if person1 == person2:
+        choosePeople()
+    return person1, person2
 
 startGame()
