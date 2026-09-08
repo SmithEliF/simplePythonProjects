@@ -21,5 +21,5 @@ def startGame():
         choice = input("Who has more followers? Type 'A' or 'B': ").upper()
         if choice in CHOICES:
             print("good job")
-            
+            break
 startGame()
