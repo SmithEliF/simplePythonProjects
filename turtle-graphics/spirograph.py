@@ -6,7 +6,6 @@ t.colormode(255)
 timmy = t.Turtle()
 timmy.shape("turtle")
 timmy.speed(200)
-timmy.width(10)
 
 def random_colour():
     r = random.randint(0, 255)
@@ -21,6 +20,6 @@ directions = [0, 90, 180, 270]
 
 while True:
     timmy.color(random_colour())
-    timmy.forward(100)
-    timmy.setheading(random.choice(directions))
+    timmy.right(10)
+    timmy.circle(100)
 
